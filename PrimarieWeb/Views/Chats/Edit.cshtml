@@ -1,0 +1,57 @@
+﻿@model PrimarieWeb.Models.Chat
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Chat</h4>
+<hr />
+<div class="table-container">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="ChatId" />
+                <div class="form-group">
+                    <label asp-for="nrParticipanti" class="control-label"></label>
+                    <input asp-for="nrParticipanti" class="form-control" />
+                    <span asp-validation-for="nrParticipanti" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="data" class="control-label"></label>
+                    <input asp-for="data" class="form-control" />
+                    <span asp-validation-for="data" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CetateanId" class="control-label"></label>
+                    <select asp-for="CetateanId" class="form-control" asp-items="ViewBag.CetateanId"></select>
+                    <span asp-validation-for="CetateanId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="back-to-list">
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<style>
+    .table-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    .back-to-list {
+        margin-top: 20px;
+        background-color: white;
+        padding: 10px;
+    }
+</style>

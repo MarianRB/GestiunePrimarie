@@ -1,0 +1,56 @@
+﻿@model IEnumerable<PrimarieWeb.Models.Document>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Documente</h1>
+
+<p>
+    <a asp-action="Create" class="highlight">Create New</a>
+</p>
+
+<table class="table table-white">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.numeDoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descriere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.urlFisier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cetatean)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numeDoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descriere)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.urlFisier)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cetatean.CetateanId)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.DocumentId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.DocumentId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.DocumentId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

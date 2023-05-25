@@ -1,0 +1,55 @@
+﻿@model IEnumerable<PrimarieWeb.Models.Eveniment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Evenimente</h1>
+
+<p>
+    <a asp-action="Create" class="highlight">Create New</a>
+</p>
+
+<table class="table table-white">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.numeEveniment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descriere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataEveniment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cetatean)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numeEveniment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descriere)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dataEveniment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cetatean.CetateanId)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.EvenimentId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.EvenimentId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.EvenimentId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+﻿@model PrimarieWeb.Models.Cetatean
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="table-white">
+    <h4>Cetatean</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.nume)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.nume)
+        </dd>
+    </dl>
+</div>
+
+<div class="highlight">
+    <a asp-action="Edit" asp-route-id="@Model?.CetateanId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GestiunePrimarie</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Views/Shared/_Layout.cshtml.css" asp-append-version="true" />
+
+    <style>
+        body {
+            background-image: url('/Images/background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Add custom styles for the Privacy Policy page */
+        section {
+            padding: 20px;
+            background-color: #ecc440;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            color: #FFFF00;
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            color: #333333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your header code here -->
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <h1>@ViewData["Title"]</h1>
+
+
+            <section>
+                <p>At GestiunePrimarie, we value the privacy of our visitors. This Privacy Policy outlines the types of personal information we collect, how we use it, and the measures we take to ensure its security.</p>
+                <p>We collect personal information such as names and email addresses when provided voluntarily by our visitors. This information is used solely for the purpose of communicating with our users and providing the requested services.</p>
+                <p>We may also collect non-personal information, such as browser information and IP addresses, to analyze trends, administer the site, and gather demographic information. This information is used in an aggregated and anonymous form.</p>
+                <p>Our site may use cookies to enhance the user experience. By using our site, you consent to the use of cookies in accordance with our Cookie Policy.</p>
+                <p>We take appropriate security measures to protect against unauthorized access, alteration, disclosure, or destruction of personal information.</p>
+                <p>By using our website, you agree to the terms of this Privacy Policy.</p>
+                <p>If you have any questions or concerns regarding our Privacy Policy, please contact us.</p>
+            </section>
+        </main>
+    </div>
+
+    @*    <footer class="border-top footer text-muted">
+    <!-- Your footer code here -->
+    </footer>*@
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

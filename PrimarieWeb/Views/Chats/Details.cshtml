@@ -1,0 +1,36 @@
+﻿@model PrimarieWeb.Models.Chat
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="table-white">
+    <h4>Chat</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nrParticipanti)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nrParticipanti)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.data)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cetatean)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cetatean.CetateanId)
+        </dd>
+    </dl>
+</div>
+<div class="highlight">
+    <a asp-action="Edit" asp-route-id="@Model?.ChatId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
